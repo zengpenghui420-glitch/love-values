@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#C45B7A">
+<meta name="description" content="恋爱观匹配度测试。18 道原创题，测你的恋爱观剖面与适配线索。娱乐向自我观察，非正式心理测量。">
+<meta property="og:title" content="恋爱观匹配度测试 · 你和TA到底合不合适">
+<meta property="og:description" content="六维画像 · 恋爱观契合指数 · 六档锐评 · 适合的TA画像。娱乐向自我观察，非正式心理测量。">
+<meta property="og:url" content="https://zengpenghui420-glitch.github.io/love-values/">
+<link rel="canonical" href="https://zengpenghui420-glitch.github.io/love-values/">
+<title>恋爱观匹配度测试 · 你和TA到底合不合适</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23C45B7A'/%3E%3Cpath d='M10 18c0-4 3-7 6-7s6 3 6 7c0 4-6 8-6 8s-6-4-6-8z' fill='none' stroke='%23FFF8FB' stroke-width='2'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#F7F4F8;--card:#FFFCFD;--ink:#2A2430;--muted:#6E6478;--faint:#A090A0;
+  --ink-deep:#221C28;--berry:#C45B7A;--berry-deep:#9A3F5C;--plum:#5B6B9A;--plum-deep:#3E4A72;
+  --cream:#F3E8EE;--line:#E5D6DE;--panel:#EFE4EA;
+  --sb:env(safe-area-inset-bottom,0px);--st:env(safe-area-inset-top,0px)
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{background:#EDE6EC;color-scheme:light}
+body{
+  max-width:430px;margin:0 auto;min-height:100dvh;color:var(--ink);line-height:1.6;
+  font-family:"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Noto Sans SC","WenQuanYi Micro Hei","Droid Sans Fallback","Microsoft YaHei",sans-serif;
+  background:
+    radial-gradient(circle at 12% -4%, rgba(196,91,122,.32), transparent 42%),
+    radial-gradient(circle at 96% 6%, rgba(91,107,154,.22), transparent 40%),
+    linear-gradient(180deg,#FFFCFD,#F7F4F8 48%,#F3E8EE);
+  overflow-x:hidden
+}
+body.lock{overflow:hidden}
+button,input{font-family:inherit}
+button{cursor:pointer}
+button:focus-visible,input:focus-visible{outline:2px solid var(--berry);outline-offset:2px}
+[hidden]{display:none !important}
+.screen{display:none}
+.screen.active{display:block}
+#start.active,#quiz.active,#loading.active{display:flex;flex-direction:column;min-height:100dvh}
+#loading.active{align-items:center;justify-content:center;text-align:center;padding:24px}
+#start{padding:calc(22px + var(--st)) 22px calc(22px + var(--sb));text-align:center}
+.mark{width:120px;height:120px;margin:8px auto 10px}
+.mark svg{width:100%;height:auto;display:block}
+.eyebrow{font-size:12px;letter-spacing:3px;color:var(--berry-deep);font-weight:600;margin-bottom:8px}
+h1{font-size:26px;line-height:1.35;font-weight:700;letter-spacing:.5px;margin-bottom:8px;color:var(--ink-deep)}
+.sub{font-size:16px;color:#5A4860;margin-bottom:8px}
+.warm{font-size:13px;color:var(--muted);margin-bottom:14px}
+.dim-intro{list-style:none;text-align:left;display:flex;flex-direction:column;gap:8px;margin:0 0 16px}
+.dim-intro li{display:flex;gap:10px;align-items:center;background:rgba(255,252,253,.94);border:1px solid var(--line);border-radius:16px;padding:8px 12px}
+.dim-intro i{flex:0 0 28px;width:28px;height:28px;border-radius:9px;background:rgba(196,91,122,.22);color:#7A3A52;font-style:normal;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.dim-intro b{display:block;font-size:14px;line-height:1.3}
+.dim-intro span{display:block;font-size:12px;color:var(--muted);line-height:1.45}
+.pills{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:18px}
+.pill{padding:5px 10px;border-radius:999px;background:rgba(255,252,253,.94);border:1px solid var(--line);color:#5A4860;font-size:12px}
+.btn-primary{width:100%;padding:15px 16px;border:none;border-radius:28px;background:linear-gradient(180deg,#C45B7A,#9A3F5C);color:#FFF8FB;font-size:17px;font-weight:700;box-shadow:0 8px 18px rgba(154,63,92,.28)}
+.btn-primary:active{transform:scale(.98)}
+.btn-primary:disabled{opacity:.65}
+.btn-ghost{width:100%;margin-top:10px;padding:13px 16px;border-radius:28px;border:1.5px solid #D8C0CC;background:rgba(255,252,253,.94);color:#5A4860;font-size:15px;font-weight:600}
+.btn-ghost:active{transform:scale(.98)}
+.hint{margin-top:14px;font-size:12px;color:var(--faint);line-height:1.6}
+.disclaimer{margin-top:16px;padding:12px 12px 12px 14px;background:#F3E8EE;border:1px solid #E5D6DE;border-left:4px solid var(--berry);border-radius:14px;color:#2A2430;font-size:13px;line-height:1.7;text-align:left}
+.disclaimer strong{font-weight:700}
+.safety{margin:4px 0 12px;padding:12px 12px 12px 14px;background:#EEF0F6;border:1px solid #D0D6E4;border-left:4px solid var(--plum);border-radius:14px;color:#2A2430;font-size:13px;line-height:1.7}
+.qh{padding:14px 18px 12px;background:rgba(247,244,248,.94);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;backdrop-filter:blur(8px)}
+.qrow{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.qback{background:none;border:none;color:var(--muted);font-size:14px;padding:4px 0}
+.qprog{font-size:13px;color:var(--berry-deep);font-weight:700}
+.track{height:6px;background:#E5D6DE;border-radius:3px;overflow:hidden}
+.fill{height:100%;width:0;background:linear-gradient(90deg,#D48AA0,#C45B7A);border-radius:3px;transition:width .3s}
+.qbody{padding:22px 20px 28px}
+.qno{font-size:12px;letter-spacing:2px;color:var(--berry-deep);font-weight:700;margin-bottom:8px}
+.qtext{font-size:20px;font-weight:700;line-height:1.5;margin-bottom:18px;color:var(--ink-deep)}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:13px 14px;background:rgba(255,252,253,.96);border:1.5px solid var(--line);border-radius:16px;color:var(--ink);font-size:15px;box-shadow:0 3px 0 rgba(229,214,222,.9)}
+.opt .onum{flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:rgba(196,91,122,.22);color:#7A3A52;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.opt.sel,.opt:active{border-color:var(--berry);background:rgba(196,91,122,.14);color:#221C28}
+.opt.sel .onum{background:var(--berry-deep);color:#FFF8FB}
+.loader{width:40px;height:40px;border:3px solid #E5D6DE;border-top-color:var(--berry-deep);border-radius:50%;animation:sp .8s linear infinite;margin:0 auto 16px}
+@keyframes sp{to{transform:rotate(360deg)}}
+.load-title{font-weight:700;color:var(--ink-deep)}
+.load-sub{margin-top:6px;font-size:13px;color:var(--faint)}
+#result{padding-bottom:calc(196px + var(--sb))}
+.rtop{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:rgba(247,244,248,.94);border-bottom:1px solid var(--line);font-size:14px;font-weight:700;backdrop-filter:blur(8px)}
+.rtop span:last-child{font-weight:500;color:#5A4860;font-size:13px}
+.result-body{padding:16px 16px 8px}
+.card{position:relative;background:linear-gradient(180deg,rgba(255,252,253,.98),rgba(247,244,248,.94));border:1px solid var(--line);border-radius:22px;padding:18px 16px 16px;margin-bottom:12px;box-shadow:0 10px 24px rgba(34,28,40,.05)}
+.kicker{font-size:12px;letter-spacing:4px;color:var(--berry-deep);font-weight:700}
+.index-num{font-size:56px;line-height:.95;font-weight:700;color:var(--ink-deep);letter-spacing:-1px;margin:4px 0 2px}
+.index-max{font-size:12px;color:var(--faint);margin-bottom:10px}
+.badge-row{display:flex;gap:8px;flex-wrap:wrap}
+.lv{display:inline-block;padding:4px 10px;border-radius:999px;background:rgba(196,91,122,.22);color:#7A3A52;font-size:13px;font-weight:700}
+.lv-line{margin-top:8px;font-size:14px;color:#3A3040;line-height:1.65}
+.lead{margin-top:14px;font-size:12px;letter-spacing:2px;color:#5A4860;font-weight:700}
+.type-title{font-size:28px;line-height:1.25;margin:4px 0 6px;color:var(--ink-deep)}
+.punch{font-size:15px;line-height:1.7;color:#3A3040}
+.egg{margin-top:10px;padding:8px 10px;border-radius:12px;background:rgba(196,91,122,.12);color:#7A3A52;font-size:13px;line-height:1.55}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.tag{padding:4px 10px;border-radius:999px;background:rgba(196,91,122,.16);color:#7A3A52;font-size:12px;font-weight:600}
+.note{margin-top:10px;font-size:12px;color:var(--muted);line-height:1.6}
+.st{font-size:16px;font-weight:700;letter-spacing:1px;margin-bottom:12px}
+.st:before{content:"";display:inline-block;width:7px;height:7px;margin-right:8px;border-radius:2px;background:var(--berry);transform:translateY(-1px) rotate(45deg)}
+.fine{margin-top:10px;font-size:12px;color:var(--muted);line-height:1.65}
+.radar-box svg{width:100%;height:auto;display:block}
+.bar{margin-top:12px}
+.bar-h{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;font-weight:700}
+.bar-h b{color:var(--berry-deep);font-size:16px}
+.bar-track{height:8px;background:#E5D6DE;border-radius:99px;overflow:hidden;margin-top:4px}
+.bar-fill{height:100%;width:0;background:linear-gradient(90deg,#D48AA0,#C45B7A);border-radius:99px}
+.bullets{list-style:none;display:flex;flex-direction:column;gap:10px}
+.bullets li{position:relative;padding-left:14px;font-size:14.5px;line-height:1.7;color:#221C28}
+.bullets li:before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;border-radius:50%;background:var(--berry-deep)}
+.score-grid{display:flex;flex-direction:column;gap:2px;margin-top:8px}
+.dim-read{padding:12px 0;border-top:1px solid var(--line)}
+.dim-read:first-of-type{border-top:none;padding-top:0}
+.dim-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.dn{font-size:14px;font-weight:700}
+.ds{font-size:18px;font-weight:700;color:#5A4860}
+.dim-read p{margin-top:4px;font-size:13.5px;color:var(--muted);line-height:1.7}
+#result .disclaimer{margin:4px 0 12px}
+.acts{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;padding:8px 12px calc(10px + var(--sb));background:rgba(255,252,253,.97);border-top:1px solid var(--line);z-index:20;display:flex;flex-direction:column;gap:6px}
+.acts-note{font-size:11px;color:var(--muted);text-align:center;line-height:1.45}
+.acts-row{display:flex;gap:8px}
+.acts-row button{flex:1;padding:11px 4px;border-radius:22px;font-size:13px;font-weight:700}
+.bo{border:1.5px solid #D8C0CC;background:#fff;color:#5A4860}
+.bp{border:none;background:linear-gradient(180deg,#C45B7A,#9A3F5C);color:#FFF8FB}
+.ov{position:fixed;inset:0;background:rgba(34,28,40,.82);z-index:200;display:none;flex-direction:column;align-items:center;padding:16px 16px calc(16px + var(--sb));overflow-y:auto}
+.ov.show{display:flex}
+.ov img{width:min(100%,400px);border-radius:16px;background:#F7F4F8}
+.ovh{color:#FFF8FB;font-size:14px;margin:8px 0 12px}
+.ovb{display:flex;gap:10px;width:100%;max-width:400px;margin-top:12px}
+.ovb button{flex:1;padding:12px;border:none;border-radius:22px;font-size:15px;font-weight:700}
+.ovb .save{background:#fff;color:var(--ink)}
+.ovb .shut{background:rgba(255,252,253,.16);color:#FFF8FB}
+.toast{position:fixed;bottom:calc(210px + var(--sb));left:50%;transform:translateX(-50%);background:rgba(34,28,40,.92);color:#FFF8FB;padding:10px 16px;border-radius:20px;font-size:13px;z-index:300;opacity:0;transition:opacity .3s;pointer-events:none;max-width:88%;text-align:center}
+.toast.show{opacity:1}
+.code-mask{position:fixed;inset:0;background:rgba(34,28,40,.48);z-index:150;display:none;align-items:center;justify-content:center;padding:20px}
+.code-mask.show{display:flex}
+.code-panel-wrap{position:relative;width:100%;max-width:340px}
+.code-panel{background:#FFFCFD;border:1.5px solid var(--line);border-radius:22px;padding:24px 18px 18px;box-shadow:0 16px 40px rgba(34,28,40,.2);text-align:center}
+.code-panel h3{font-size:18px;margin-bottom:14px;color:var(--ink-deep)}
+.code-panel input{width:100%;padding:14px 12px;border:1.5px solid var(--line);border-radius:14px;font-size:18px;letter-spacing:2px;text-align:center;color:var(--ink);background:#F7F4F8;outline:none}
+.code-panel input:focus{border-color:var(--berry);background:#fff}
+.code-panel .btn-primary{margin-top:12px}
+.code-hint{margin-top:12px;font-size:12px;color:var(--faint);line-height:1.6}
+.code-close{position:absolute;top:8px;right:12px;background:none;border:none;font-size:22px;color:var(--faint);line-height:1;padding:4px}
+@media (prefers-reduced-motion:reduce){.fill,.toast,.bar-fill{transition:none}.loader{animation:none}}
+</style>
+</head>
+<body>
+<section id="start" class="screen active">
+  <div class="mark" aria-hidden="true">
+    <svg viewBox="0 0 120 120">
+      <defs>
+        <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#D48AA0"/>
+          <stop offset="100%" stop-color="#C45B7A"/>
+        </linearGradient>
+      </defs>
+      <rect x="8" y="8" width="104" height="104" rx="28" fill="#F3E8EE"/>
+      <rect x="8" y="8" width="104" height="104" rx="28" fill="none" stroke="#E5D6DE" stroke-width="2"/>
+      <path d="M40 58c0-8 6-14 12-14s12 6 12 14c0 10-12 18-12 18s-12-8-12-18z" fill="none" stroke="url(#g1)" stroke-width="5" stroke-linejoin="round"/>
+      <circle cx="78" cy="48" r="10" fill="none" stroke="#5B6B9A" stroke-width="4" opacity=".9"/>
+      <path d="M70 70h16M78 62v16" stroke="#5B6B9A" stroke-width="3.5" stroke-linecap="round" opacity=".85"/>
+    </svg>
+  </div>
+  <p class="eyebrow">娱乐向 · 自我观察</p>
+  <h1>恋爱观匹配度测试</h1>
+  <p class="sub">你和TA到底合不合适</p>
+  <p class="warm">锐利但友善 · 测的是你的恋爱观剖面，不是判决谁合谁不合</p>
+  <ul class="dim-intro">
+    <li><i>C</i><div><b>承诺锚定</b><span>要把未来说清楚、要稳定投入</span></div></li>
+    <li><i>R</i><div><b>浪漫供氧</b><span>仪式感、心动、小惊喜的刚需</span></div></li>
+    <li><i>B</i><div><b>边界半径</b><span>需要独处与自我空间的程度</span></div></li>
+    <li><i>F</i><div><b>冲突修复</b><span>吵完愿不愿意谈、修得快不快</span></div></li>
+    <li><i>P</i><div><b>现实同频</b><span>钱/生活/节奏等现实议题的权重</span></div></li>
+    <li><i>I</i><div><b>亲密带宽</b><span>愿不愿意掏心窝、情绪互通</span></div></li>
+  </ul>
+  <div class="pills"><span class="pill">18 道题</span><span class="pill">六维雷达</span><span class="pill">恋爱观契合指数</span></div>
+  <button class="btn-primary" id="btnStart" type="button">开始测试</button>
+  <button class="btn-ghost" id="btnLast" type="button" hidden>查看上次结果</button>
+  <p class="hint">单选 · 没有标准答案 · 仅娱乐向自我观察</p>
+  <p class="disclaimer" id="startDisclaimer"></p>
+</section>
+
+<section id="quiz" class="screen">
+  <div class="qh">
+    <div class="qrow"><button class="qback" id="qback" type="button">← 返回</button><span class="qprog" id="qprog"></span></div>
+    <div class="track"><div class="fill" id="fill"></div></div>
+  </div>
+  <div class="qbody">
+    <div class="qno" id="qno"></div>
+    <div class="qtext" id="qtext"></div>
+    <div class="opts" id="opts"></div>
+  </div>
+</section>
+
+<section id="loading" class="screen">
+  <div class="loader"></div>
+  <div class="load-title">正在对齐恋爱观雷达…</div>
+  <div class="load-sub">六维剖面校准中</div>
+</section>
+
+<section id="result" class="screen">
+  <div class="rtop"><span>恋爱观匹配度测试</span><span id="resultMeta"></span></div>
+  <div class="result-body" id="resultBody"></div>
+  <div class="acts">
+    <p class="acts-note">娱乐向自我观察 · 非正式心理测量 · 不是对现实伴侣的判决</p>
+    <div class="acts-row">
+      <button class="bo" id="btnViewLast" type="button">查看上次</button>
+      <button class="bo" id="btnCopy" type="button">复制文案</button>
+      <button class="bp" id="btnImg" type="button">生成卡片</button>
+    </div>
+    <div class="acts-row">
+      <button class="bp" id="btnRetry" type="button" style="flex:1">重新测试</button>
+    </div>
+  </div>
+</section>
+
+<div class="code-mask" id="codeMask" aria-hidden="true">
+  <div class="code-panel-wrap">
+    <button class="code-close" id="codeClose" type="button" aria-label="关闭">×</button>
+    <div class="code-panel">
+      <h3>输入验证码</h3>
+      <input id="codeInput" type="text" inputmode="text" autocomplete="off" autocapitalize="characters" maxlength="8" placeholder="LVXXXX" aria-label="验证码">
+      <button class="btn-primary" id="btnCodeOk" type="button">开始答题</button>
+      <p class="code-hint">每码可测 3 次。重新测试会再扣 1 次；查看上次结果不扣次。</p>
+    </div>
+  </div>
+</div>
+
+<div class="ov" id="ov" aria-hidden="true">
+  <p class="ovh">长按图片保存，或点下方下载</p>
+  <img id="shareImg" alt="分享卡片">
+  <div class="ovb">
+    <button class="save" id="btnDl" type="button">下载图片</button>
+    <button class="shut" id="btnClose" type="button">关闭</button>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:24px;text-align:center">请开启 JavaScript 后使用本测验。</p></noscript>
+<script>
+const API_BASE='https://snappy-tundra-7uesdvk.tmp.now';
+const QUIZ_KEY='values';
+const ACCESS_KEY='values_unlocked';
+const ACCESS_CODE_KEY='values_code';
+const LAST_KEY='values_last_result';
+const CODE_RE=/^LV[ABCDEFGHJKMNPQRSTUVWXYZ23456789]{4}$/i;
+const URL_='https://zengpenghui420-glitch.github.io/love-values/';
+const DISCLAIMER='本测试为娱乐向自我观察，非正式心理测量，不能替代专业评估或情侣咨询。「恋爱观 / 匹配度 / 合不合适」描述的是你个人的关系价值取向与适配线索，不是对现实伴侣的判决，也不预测恋爱成败；现实关系远比标签复杂，重要决定请结合真实沟通。';
+const SAFETY_NOTE='恋爱观没有标准答案。差异不等于不合格；若关系中出现控制、威胁或人身安全问题，请优先寻求现实支持，不要只依赖本测试。';
+const FONT='"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Noto Sans SC","WenQuanYi Micro Hei","Droid Sans Fallback","Microsoft YaHei",sans-serif';
+const CHOICES=[{v:1,t:'完全不像我'},{v:2,t:'不太像'},{v:3,t:'说不清'},{v:4,t:'有点像'},{v:5,t:'非常像我'}];
+const DIM_IDS=['C','R','B','F','P','I'];
+const DIM_META={
+  C:{name:'承诺锚定', tip:'要把未来说清楚、要稳定投入', high:'含糊会不安，想要节奏与确定性', low:'更享受流动，少被时间表绑住',
+    engine:'你的恋爱观主轴是「承诺锚定」：确定性与稳定投入最容易让你安心。'},
+  R:{name:'浪漫供氧', tip:'仪式感、心动、小惊喜的刚需', high:'没仪式感会觉得感情在漏气', low:'平淡日常也能觉得够爱',
+    engine:'你的恋爱观主轴是「浪漫供氧」：仪式感与心动时刻像给关系续航。'},
+  B:{name:'边界半径', tip:'需要独处与自我空间的程度', high:'粘太紧会窒息，要留白', low:'更想贴贴，分开久了空',
+    engine:'你的恋爱观主轴是「边界半径」：留白与自我空间是你舒服相处的前提。'},
+  F:{name:'冲突修复', tip:'吵完愿不愿意谈、修得快不快', high:'隔夜仇难受，想当面说开', low:'需要冷却，硬聊会更炸',
+    engine:'你的恋爱观主轴是「冲突修复」：吵完愿不愿意谈，决定关系能不能走远。'},
+  P:{name:'现实同频', tip:'钱/生活/节奏等现实议题的权重', high:'价值观要对齐才敢认真', low:'先谈感觉，现实可以后补',
+    engine:'你的恋爱观主轴是「现实同频」：日子能不能一起过顺，比当下上头更关键。'},
+  I:{name:'亲密带宽', tip:'愿不愿意掏心窝、情绪互通', high:'不交心就像室友恋爱', low:'保留一角私密才舒服',
+    engine:'你的恋爱观主轴是「亲密带宽」：情绪互通与掏心窝，才算真正在一起。'}
+};
+
+const QS=[
+  {id:'C1', dim:'C', t:'如果对方迟迟不说「我们是不是在一起」，你会明显不安，想把关系说清楚。'},
+  {id:'C2', dim:'C', t:'聊到未来（同居/见家长/长期规划）时，有明确态度的人会让你更踏实。'},
+  {id:'C3', dim:'C', rev:true, t:'你觉得关系可以先模糊着处，定名分和承诺都不着急。'},
+  {id:'R1', dim:'R', t:'纪念日、小惊喜、突然的情话，对你来说不是多余，是感情还在呼吸的证据。'},
+  {id:'R2', dim:'R', t:'一段关系如果长期只剩吃饭睡觉通勤，你会觉得爱在变淡。'},
+  {id:'R3', dim:'R', rev:true, t:'你不太需要仪式感；对方稳稳在就够了，花活可有可无。'},
+  {id:'B1', dim:'B', t:'即使很爱对方，你也需要独处充电的时间，被24小时绑着会烦。'},
+  {id:'B2', dim:'B', t:'手机不必共享、朋友局不必汇报每一次，你觉得这是正常边界不是隐瞒。'},
+  {id:'B3', dim:'B', rev:true, t:'你更喜欢几乎天天黏在一起；分开太久会空落落的。'},
+  {id:'F1', dim:'F', t:'吵完你更想尽快坐下把话说开，而不是冷战拖好几天。'},
+  {id:'F2', dim:'F', t:'对方愿意承认自己的部分、一起想怎么修，比争「谁对谁错」更重要。'},
+  {id:'F3', dim:'F', rev:true, t:'冲突后来你常需要很久冷却，对方一催着聊你会更想躲。'},
+  {id:'P1', dim:'P', t:'金钱观、作息、对「认真生活」的态度差太多时，你会很难继续上头。'},
+  {id:'P2', dim:'P', t:'谈恋爱也会想：我们能不能一起把日子过顺，而不只是当下开心。'},
+  {id:'P3', dim:'P', rev:true, t:'你觉得先爱着就好，钱和生活节奏以后自然会磨合。'},
+  {id:'I1', dim:'I', t:'你希望对方愿意听你讲脆弱和乱糟糟的情绪，而不只是报喜不报忧。'},
+  {id:'I2', dim:'I', t:'如果长期只能聊行程和表面话题，你会觉得这段关系不够「真的在一起」。'},
+  {id:'I3', dim:'I', rev:true, t:'你习惯把真正的心事留一部分给自己，不完全摊开反而更安心。'}
+];
+
+const TIERS=[
+  {id:'DRIFT', min:0, max:20, name:'观感未定型 · 随缘漂流派', punch:'你还在摸自己要什么，别急着盖章「合不合」',
+    traits:[
+      '恋爱观还在流动，很多议题上你自己也说不清「必须怎样」。',
+      '容易被当下感觉带走，框架与细则可以后置。',
+      '对承诺、边界、现实议题的偏好尚未定型。',
+      '别人问「你要什么样的关系」时，常会卡住。',
+      '这不是缺点，只是阶段：先观察自己的触发点，再谈合拍。'
+    ],
+    partnerFit:[
+      '耐心、不强行定义关系的人，给你空间慢慢摸清自己。',
+      '愿意一起试错、不急着盖章「合不合」的伴侣。',
+      '情绪稳定、少贴标签的人，比「标准答案型」更合适。',
+      '能陪你把模糊感觉翻译成具体需要的人。'
+    ],
+    advice:[
+      '先多观察自己的情绪触发，再谈合拍标签。',
+      '把「我好像不太舒服」记下来，比急着定性更有用。',
+      '允许取向流动，同时守住人身与边界安全底线。',
+      '重要决定别只靠感觉，补一两句真实沟通。'
+    ]},
+  {id:'SOFT', min:21, max:40, name:'柔焦恋爱观 · 感觉优先', punch:'感觉对了再谈细则，框架可以后补',
+    traits:[
+      '感觉优先：对了再谈细则，框架可以后补。',
+      '浪漫与亲密的体感往往比时间表更重要。',
+      '对承诺、现实议题有偏好，但弹性大、不硬卡。',
+      '冲突时可能先靠感觉判断，细则沟通偏后置。',
+      '合拍对你来说，首先是「舒服不像演戏」。'
+    ],
+    partnerFit:[
+      '会给安全感又不催着定框架的人。',
+      '懂得用行动表达在意，而不是只催进度的人。',
+      '能接受你边走边想、边处边清晰的节奏。',
+      '在关键时刻愿意轻轻对齐期待的人。'
+    ],
+    advice:[
+      '把底线至少说清两三条，别全靠对方猜。',
+      '感觉很好时，也抽空对齐钱/边界/冲突怎么处理。',
+      '用「我需要…」代替沉默期待。',
+      '保留一块只属于自己的判断，别把合拍外包。'
+    ]},
+  {id:'MIX', min:41, max:55, name:'混搭适配派 · 弹性协商', punch:'你有底线也有弹性，合拍靠谈不靠猜',
+    traits:[
+      '有底线也有弹性：六维上常呈现混搭而非极端。',
+      '合拍对你来说靠谈、靠改节奏，不靠一次盖章。',
+      '承诺、浪漫、边界都能谈，很少被单一标签绑死。',
+      '冲突后愿意修，但也可能需要一点冷却窗口。',
+      '现实与亲密都重要，权重随阶段浮动。'
+    ],
+    partnerFit:[
+      '愿意谈差异、能改节奏的人。',
+      '表达清楚、不回避议题的协商型伴侣。',
+      '既给空间又肯投入的人，比极端粘/极端冷更合适。',
+      '冲突后愿意回来谈、而不是只冷战的人。'
+    ],
+    advice:[
+      '用「我需要…」代替猜，减少默认期待。',
+      '定期同步：最近哪几条底线变了、哪几条还在。',
+      '差异出现时先问「怎么一起过」，少问「合不合」。',
+      '把弹性用在方法上，把硬底线留在安全与尊重上。'
+    ]},
+  {id:'CLEAR', min:56, max:70, name:'恋爱观清晰 · 好对齐型', punch:'期待说得清，对方少猜你一半',
+    traits:[
+      '期待说得清：对方少猜你一半。',
+      '六维偏好相对鲜明，谈合拍时更容易对齐。',
+      '承诺、修复、现实或亲密中至少有几条硬偏好。',
+      '喜欢把关系议题摊开聊，而不是靠读心。',
+      '清晰不等于苛刻——你只是不想靠猜过日子。'
+    ],
+    partnerFit:[
+      '表达清楚、肯同步期待的人。',
+      '愿意把「我们怎么处」说具体的伴侣。',
+      '冲突时能回应议题、不假装没发生的人。',
+      '现实节奏与亲密方式愿意一起校准的人。'
+    ],
+    advice:[
+      '定期复核双方期待有没有漂移。',
+      '清晰之外留一点柔软，给对方消化时间。',
+      '把偏好翻译成具体请求，而不是抽象标准。',
+      '对齐不等于统一；求同存异也要写进相处里。'
+    ]},
+  {id:'SHARP', min:71, max:85, name:'高清晰恋爱观 · 同频刚需', punch:'不对齐的议题会快速显形，这是保护不是挑剔',
+    traits:[
+      '不对齐的议题会快速显形——这是保护，不是挑剔。',
+      '六维上偏好鲜明，模糊相处容易让你耗电。',
+      '同频（价值观/节奏/修复方式）是刚需。',
+      '热闹吸引留不住你，经得起对齐的关系才行。',
+      '你愿意谈，也希望对方同样认真对待议题。'
+    ],
+    partnerFit:[
+      '价值观接近、冲突能修的人。',
+      '愿意前置沟通差异议题的伴侣。',
+      '现实与亲密带宽都大致同频的人。',
+      '能接受「说清楚」而不觉得被审讯的人。'
+    ],
+    advice:[
+      '差异议题尽量前置沟通，少拖到破防。',
+      '高清晰也要检查：是标准还是恐惧在说话。',
+      '给对方一点对齐缓冲，别把每句差异都升级。',
+      '用具体议题清单代替笼统的「我们合不合」。'
+    ]},
+  {id:'LOCK', min:86, max:100, name:'恋爱观锁定 · 深度同频控', punch:'你要的是价值观合拍，热闹吸引留不住你',
+    traits:[
+      '你要的是价值观合拍：热闹吸引很难单独留住你。',
+      '六维剖面高度清晰，偏好几乎写在脸上。',
+      '承诺、现实、亲密或修复中多条都是硬条件。',
+      '深度同频优先于新鲜感与表面合拍。',
+      '标签背后是强烈的「对齐才敢认真」需求。'
+    ],
+    partnerFit:[
+      '能交心、现实也合拍、冲突肯修的人。',
+      '价值观与生活节奏接近、愿意深度同步的伴侣。',
+      '不回避严肃议题、也不用控制代替亲密的人。',
+      '能把「合拍」落成日常行动而不是口号的人。'
+    ],
+    advice:[
+      '别用「合不合」压迫对方，改成具体议题对齐。',
+      '锁定取向可以，仍要留出成长与协商空间。',
+      '确认「同频」建立在自愿沟通上，不是单方面标准。',
+      '重要决定结合真实相处，不只依赖测试标签。'
+    ]}
+];
+
+let ans=[], qi=0, picking=false, codeBusy=false, current=null, order=[];
+
+function $(id){return document.getElementById(id)}
+function el(tag, cls, text){
+  const n=document.createElement(tag);
+  if(cls) n.className=cls;
+  if(text!=null) n.textContent=text;
+  return n;
+}
+function esc(s){return String(s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function show(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  $(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+function toast(msg){
+  const t=$('toast');
+  t.textContent=msg;
+  t.classList.add('show');
+  clearTimeout(toast._tm);
+  toast._tm=setTimeout(()=>t.classList.remove('show'),2200);
+}
+function itemScore(q,v){return q.rev?6-v:v}
+function to100(mean){return Math.round(Math.max(0,Math.min(100,((mean-1)/4)*100)))}
+function shuffle(arr){
+  const a=arr.slice();
+  for(let i=a.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    const t=a[i];a[i]=a[j];a[j]=t;
+  }
+  return a;
+}
+function scoreFromAnswers(list){
+  const buckets={C:[],R:[],B:[],F:[],P:[],I:[]};
+  list.forEach((v,i)=>{
+    const q=QS[order[i]];
+    buckets[q.dim].push(itemScore(q,v));
+  });
+  const scores={};
+  DIM_IDS.forEach(id=>{
+    const arr=buckets[id];
+    const mean=arr.reduce((s,x)=>s+x,0)/arr.length;
+    scores[id]=to100(mean);
+  });
+  return scores;
+}
+function indexOf(scores){
+  // 恋爱观契合指数 = 六维均值：剖面越清晰/偏好越鲜明，分数越高
+  const sum=DIM_IDS.reduce((s,id)=>s+scores[id],0);
+  return Math.round(sum/DIM_IDS.length);
+}
+function tierOf(index){
+  const n=Math.max(0,Math.min(100,index));
+  for(const t of TIERS){
+    if(n>=t.min && n<=t.max) return t;
+  }
+  return TIERS[TIERS.length-1];
+}
+function dominantOf(scores){
+  let best=DIM_IDS[0], bestScore=scores[DIM_IDS[0]];
+  for(let i=1;i<DIM_IDS.length;i++){
+    const id=DIM_IDS[i];
+    if(scores[id]>bestScore){best=id;bestScore=scores[id]}
+  }
+  return best;
+}
+function analyze(scores){
+  const index=indexOf(scores);
+  const tier=tierOf(index);
+  const dom=dominantOf(scores);
+  return {
+    scores,
+    index,
+    tierId:tier.id,
+    name:tier.name,
+    punch:tier.punch,
+    traits:tier.traits,
+    partnerFit:tier.partnerFit,
+    advice:tier.advice,
+    dominant:dom,
+    dominantName:DIM_META[dom].name,
+    engine:DIM_META[dom].engine
+  };
+}
+function fillDisclaimer(node){
+  node.textContent='';
+  const marks=['非正式心理测量','不能替代专业评估或情侣咨询','不是对现实伴侣的判决'];
+  const re=new RegExp('('+marks.map(m=>m.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|')+')');
+  DISCLAIMER.split(re).forEach(part=>{
+    if(marks.indexOf(part)>=0) node.appendChild(el('strong',null,part));
+    else if(part) node.appendChild(document.createTextNode(part));
+  });
+}
+function radarSVG(r){
+  const dims=DIM_IDS.map(id=>({name:DIM_META[id].name, score:r.scores[id]}));
+  const cx=220, cy=230, R=92, n=dims.length;
+  const pt=(i,v)=>{
+    const a=-Math.PI/2+(i*2*Math.PI)/n;
+    const rr=Math.max(0,Math.min(100,v))/100*R;
+    return [cx+rr*Math.cos(a), cy+rr*Math.sin(a)];
+  };
+  let rings='', axes='', nums='';
+  [25,50,75,100].forEach(k=>{
+    const pts=[];
+    for(let i=0;i<n;i++) pts.push(pt(i,k).map(v=>v.toFixed(1)).join(','));
+    const strong=k===50||k===100;
+    rings+='<polygon points="'+pts.join(' ')+'" fill="'+(k===100?'rgba(196,91,122,0.08)':'none')+'" stroke="'+(strong?'#D8C0CC':'#E5D6DE')+'" stroke-width="'+(strong?'1.6':'1')+'"/>';
+    const wedge=-Math.PI/3;
+    const sx=cx+(k/100)*R*Math.cos(wedge);
+    const sy=cy+(k/100)*R*Math.sin(wedge);
+    nums+='<text x="'+sx.toFixed(1)+'" y="'+sy.toFixed(1)+'" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#A090A0">'+k+'</text>';
+  });
+  for(let i=0;i<n;i++){
+    const p=pt(i,100);
+    axes+='<line x1="'+cx+'" y1="'+cy+'" x2="'+p[0].toFixed(1)+'" y2="'+p[1].toFixed(1)+'" stroke="#E5D6DE" stroke-width="1"/>';
+  }
+  const poly=dims.map((d,i)=>pt(i,d.score).map(v=>v.toFixed(1)).join(',')).join(' ');
+  const dots=dims.map((d,i)=>{
+    const p=pt(i,d.score);
+    return '<circle cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="4.2" fill="#F7F4F8" stroke="#C45B7A" stroke-width="2"/>';
+  }).join('');
+  let labels='';
+  const halo=' stroke="#F7F4F8" stroke-width="4" paint-order="stroke"';
+  dims.forEach((d,i)=>{
+    const a=-Math.PI/2+(i*2*Math.PI)/n;
+    const lr=R+52;
+    const x=cx+lr*Math.cos(a);
+    const y=cy+lr*Math.sin(a);
+    const anchor=Math.abs(Math.cos(a))<0.35?'middle':(Math.cos(a)>0?'start':'end');
+    labels+='<text x="'+x.toFixed(1)+'" y="'+(y-8).toFixed(1)+'" text-anchor="'+anchor+'" font-size="12" fill="#221C28"'+halo+'>'+esc(d.name)+'</text>';
+    labels+='<text x="'+x.toFixed(1)+'" y="'+(y+10).toFixed(1)+'" text-anchor="'+anchor+'" font-size="15" font-weight="700" fill="#5A4860"'+halo+'>'+d.score+'</text>';
+  });
+  const aria='六维雷达图，刻度 0 到 100。'+dims.map(d=>d.name+' '+d.score).join('，');
+  return '<svg viewBox="0 0 440 470" role="img" aria-label="'+esc(aria)+'">'+
+    rings+axes+
+    '<polygon points="'+poly+'" fill="rgba(196,91,122,0.36)" stroke="#9A3F5C" stroke-width="2.4" stroke-linejoin="round"/>'+
+    dots+nums+labels+'</svg>';
+}
+function renderResult(r){
+  current=r;
+  const root=$('resultBody');
+  root.textContent='';
+  $('resultMeta').textContent=r.name+' · '+r.index;
+
+  const hero=el('section','card');
+  hero.appendChild(el('p','kicker','恋爱观契合指数'));
+  hero.appendChild(el('p','index-num',String(r.index)));
+  hero.appendChild(el('p','index-max','越高越清晰可沟通 · 0–100'));
+  const badge=el('div','badge-row');
+  badge.appendChild(el('span','lv',r.tierId));
+  hero.appendChild(badge);
+  hero.appendChild(el('p','lead','当前档位'));
+  const title=el('h2','type-title',r.name);
+  title.id='typeTitle';
+  hero.appendChild(title);
+  hero.appendChild(el('p','punch',r.punch));
+  hero.appendChild(el('p','egg',r.engine));
+  const tags=el('div','tags');
+  tags.appendChild(el('span','tag','主导 · '+r.dominantName));
+  tags.appendChild(el('span','tag',r.tierId));
+  tags.appendChild(el('span','tag','指数 '+r.index));
+  hero.appendChild(tags);
+  hero.appendChild(el('p','note','「契合」指你恋爱观剖面的清晰与可沟通程度，不是「已找到完美对象」。主导倾向取六维最高分；并列时按 承诺→浪漫→边界→修复→现实→亲密 优先。'));
+  root.appendChild(hero);
+
+  const radar=el('section','card');
+  radar.id='radarCard';
+  radar.appendChild(el('h2','st','六维雷达'));
+  const box=el('div','radar-box');
+  box.innerHTML=radarSVG(r);
+  radar.appendChild(box);
+  const grid=el('div','score-grid');
+  DIM_IDS.forEach(id=>{
+    const row=el('div','bar');
+    const h=el('div','bar-h');
+    h.appendChild(document.createTextNode(DIM_META[id].name));
+    h.appendChild(el('b',null,String(r.scores[id])));
+    row.appendChild(h);
+    const track=el('div','bar-track');
+    const fill=el('div','bar-fill');
+    fill.style.width=r.scores[id]+'%';
+    track.appendChild(fill);
+    row.appendChild(track);
+    grid.appendChild(row);
+  });
+  radar.appendChild(grid);
+  radar.appendChild(el('p','fine','外圈是 100。越靠外，这一维自我报告倾向越明显。指数是六维均值，越高表示偏好越鲜明、谈合拍越好对齐。'));
+  root.appendChild(radar);
+
+  const feat=el('section','card');
+  feat.appendChild(el('h2','st','特征表现'));
+  const ul=el('ul','bullets');
+  r.traits.forEach(t=>{const li=el('li');li.textContent=t;ul.appendChild(li)});
+  feat.appendChild(ul);
+  root.appendChild(feat);
+
+  const fit=el('section','card');
+  fit.appendChild(el('h2','st','适合的TA画像'));
+  const ulFit=el('ul','bullets');
+  (r.partnerFit||[]).forEach(t=>{const li=el('li');li.textContent=t;ulFit.appendChild(li)});
+  fit.appendChild(ulFit);
+  fit.appendChild(el('p','fine','画像是适配线索，不是筛选名单；现实关系仍以真实沟通为准。'));
+  root.appendChild(fit);
+
+  const adv=el('section','card');
+  adv.appendChild(el('h2','st','相处小建议'));
+  const ul2=el('ul','bullets');
+  r.advice.forEach(t=>{const li=el('li');li.textContent=t;ul2.appendChild(li)});
+  adv.appendChild(ul2);
+  root.appendChild(adv);
+
+  const dimCard=el('section','card');
+  dimCard.appendChild(el('h2','st','六维速读'));
+  DIM_IDS.forEach(id=>{
+    const block=el('div','dim-read');
+    const head=el('div','dim-head');
+    head.appendChild(el('span','dn',DIM_META[id].name+(id===r.dominant?' · 主导':'')));
+    head.appendChild(el('span','ds',String(r.scores[id])));
+    block.appendChild(head);
+    const tip=r.scores[id]>=67?DIM_META[id].high:(r.scores[id]<=33?DIM_META[id].low:DIM_META[id].tip);
+    block.appendChild(el('p',null,tip));
+    dimCard.appendChild(block);
+  });
+  root.appendChild(dimCard);
+
+  const safe=el('p','safety');
+  safe.textContent=SAFETY_NOTE;
+  root.appendChild(safe);
+
+  const disc=el('p','disclaimer');
+  fillDisclaimer(disc);
+  root.appendChild(disc);
+}
+function resultText(r){
+  return [
+    '【恋爱观匹配度测试】',
+    r.name+' · 恋爱观契合指数 '+r.index,
+    r.punch,
+    '主导倾向：'+r.dominantName,
+    r.engine,
+    '六维：'+DIM_IDS.map(id=>DIM_META[id].name+r.scores[id]).join(' / '),
+    '特征：'+r.traits.slice(0,3).join('；'),
+    '适合的TA：'+(r.partnerFit||[]).slice(0,2).join('；'),
+    DISCLAIMER,
+    URL_
+  ].filter(Boolean).join('\n');
+}
+function copyText(){
+  if(!current) return;
+  const text=resultText(current);
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(()=>toast('已复制结果文案')).catch(()=>fallbackCopy(text));
+  }else fallbackCopy(text);
+}
+function fallbackCopy(text){
+  const ta=document.createElement('textarea');
+  ta.value=text;document.body.appendChild(ta);ta.select();
+  try{document.execCommand('copy');toast('已复制结果文案')}catch(e){toast('复制失败，请手动长按选择')}
+  document.body.removeChild(ta);
+}
+function roundRect(ctx,x,y,w,h,r){
+  ctx.beginPath();
+  ctx.moveTo(x+r,y);
+  ctx.arcTo(x+w,y,x+w,y+h,r);
+  ctx.arcTo(x+w,y+h,x,y+h,r);
+  ctx.arcTo(x,y+h,x,y,r);
+  ctx.arcTo(x,y,x+w,y,r);
+  ctx.closePath();
+}
+function wrapT(ctx,text,maxW){
+  const chars=String(text).split('');
+  const lines=[]; let line='';
+  for(const ch of chars){
+    const t=line+ch;
+    if(ctx.measureText(t).width>maxW && line){lines.push(line);line=ch}
+    else line=t;
+  }
+  if(line) lines.push(line);
+  return lines;
+}
+function drawRadarCanvas(ctx,cx,cy,R,scores){
+  const n=6;
+  const pt=(i,v)=>{
+    const a=-Math.PI/2+(i*2*Math.PI)/n;
+    const rr=Math.max(0,Math.min(100,v))/100*R;
+    return [cx+rr*Math.cos(a), cy+rr*Math.sin(a)];
+  };
+  [25,50,75,100].forEach(k=>{
+    ctx.beginPath();
+    for(let i=0;i<n;i++){
+      const p=pt(i,k);
+      if(i===0) ctx.moveTo(p[0],p[1]); else ctx.lineTo(p[0],p[1]);
+    }
+    ctx.closePath();
+    ctx.strokeStyle=k===100||k===50?'#D8C0CC':'#E5D6DE';
+    ctx.lineWidth=k===100?1.6:1;
+    ctx.stroke();
+  });
+  for(let i=0;i<n;i++){
+    const p=pt(i,100);
+    ctx.beginPath();ctx.moveTo(cx,cy);ctx.lineTo(p[0],p[1]);
+    ctx.strokeStyle='#E5D6DE';ctx.lineWidth=1;ctx.stroke();
+  }
+  ctx.beginPath();
+  DIM_IDS.forEach((id,i)=>{
+    const p=pt(i,scores[id]);
+    if(i===0) ctx.moveTo(p[0],p[1]); else ctx.lineTo(p[0],p[1]);
+  });
+  ctx.closePath();
+  ctx.fillStyle='rgba(196,91,122,0.36)';
+  ctx.strokeStyle='#9A3F5C';
+  ctx.lineWidth=2.4;
+  ctx.fill();ctx.stroke();
+  DIM_IDS.forEach((id,i)=>{
+    const p=pt(i,scores[id]);
+    ctx.beginPath();ctx.arc(p[0],p[1],4,0,Math.PI*2);
+    ctx.fillStyle='#F7F4F8';ctx.strokeStyle='#C45B7A';ctx.lineWidth=2;ctx.fill();ctx.stroke();
+    const a=-Math.PI/2+(i*2*Math.PI)/n;
+    const lx=cx+(R+28)*Math.cos(a), ly=cy+(R+28)*Math.sin(a);
+    ctx.fillStyle='#221C28';ctx.font='600 13px '+FONT;
+    ctx.textAlign=Math.abs(Math.cos(a))<0.35?'center':(Math.cos(a)>0?'left':'right');
+    ctx.fillText(DIM_META[id].name,lx,ly);
+  });
+}
+function buildShare(r){
+  const W=750, H=1280;
+  const cv=document.createElement('canvas');
+  cv.width=W;cv.height=H;
+  const x=cv.getContext('2d');
+  const g=x.createLinearGradient(0,0,0,H);
+  g.addColorStop(0,'#FFFCFD');g.addColorStop(1,'#F3E8EE');
+  x.fillStyle=g;x.fillRect(0,0,W,H);
+  function T(t,tx,ty,s,col,wt){x.fillStyle=col;x.font=(wt||'600')+' '+s+'px '+FONT;x.fillText(t,tx,ty)}
+  roundRect(x,40,48,W-80,H-96,28);
+  x.fillStyle='#FFFCFD';x.fill();
+  x.strokeStyle='#E5D6DE';x.lineWidth=2;x.stroke();
+  T('恋爱观匹配度测试',70,110,22,'#9A3F5C','700');
+  T(r.name,70,180,40,'#221C28','700');
+  T('恋爱观契合指数 '+r.index,70,230,26,'#5A4860','700');
+  const punchLines=wrapT(Object.assign(x,{font:'500 24px '+FONT})||x, r.punch, W-160);
+  x.font='500 24px '+FONT;x.fillStyle='#3A3040';
+  punchLines.slice(0,3).forEach((ln,i)=>x.fillText(ln,70,280+i*36));
+  drawRadarCanvas(x,W/2,560,140,r.scores);
+  let y=760;
+  x.font='600 22px '+FONT;x.fillStyle='#221C28';x.fillText('特征表现',70,y);
+  y+=36;
+  x.font='400 20px '+FONT;x.fillStyle='#3A3040';
+  r.traits.slice(0,3).forEach(t=>{
+    wrapT(x,'· '+t,W-160).slice(0,2).forEach(ln=>{x.fillText(ln,70,y);y+=30});
+    y+=8;
+  });
+  y=Math.max(y,1080);
+  x.font='400 16px '+FONT;x.fillStyle='#A090A0';
+  x.fillText('娱乐向 · 非正式心理测量 · 非判决伴侣',70,y);
+  x.fillText(URL_,70,y+28);
+  return cv.toDataURL('image/png');
+}
+function showShare(){
+  if(!current) return;
+  try{
+    const url=buildShare(current);
+    window.__shareUrl=url;
+    $('shareImg').src=url;
+    $('ov').classList.add('show');
+    $('ov').setAttribute('aria-hidden','false');
+  }catch(e){
+    console.error(e);
+    toast('生成卡片失败，请截图保存');
+  }
+}
+function renderQ(){
+  const total=QS.length;
+  const q=QS[order[qi]];
+  $('qprog').textContent=(qi+1)+' / '+total;
+  $('fill').style.width=((qi)/total*100)+'%';
+  $('qno').textContent='第 '+(qi+1)+' 题';
+  $('qtext').textContent=q.t;
+  const box=$('opts');
+  box.textContent='';
+  CHOICES.forEach(c=>{
+    const b=el('button','opt');
+    b.type='button';
+    const num=el('span','onum',String(c.v));
+    b.appendChild(num);
+    b.appendChild(document.createTextNode(c.t));
+    if(ans[qi]===c.v) b.classList.add('sel');
+    b.onclick=()=>pick(c.v);
+    box.appendChild(b);
+  });
+}
+function pick(v){
+  if(picking) return;
+  picking=true;
+  ans[qi]=v;
+  renderQ();
+  setTimeout(()=>{
+    if(qi<QS.length-1){qi++;picking=false;renderQ()}
+    else {picking=false;finish()}
+  },180);
+}
+function finish(){
+  show('loading');
+  setTimeout(()=>{
+    const scores=scoreFromAnswers(ans);
+    const report=analyze(scores);
+    try{
+      const saved=Object.assign({tierId:report.tierId,name:report.name,index:report.index,dominant:report.dominant,punch:report.punch,at:Date.now()}, scores);
+      localStorage.setItem(LAST_KEY, JSON.stringify(saved));
+    }catch(e){}
+    refreshLastBtn();
+    renderResult(report);
+    show('result');
+  },900);
+}
+function isUnlocked(){try{return sessionStorage.getItem(ACCESS_KEY)==='1'}catch(e){return false}}
+function setUnlocked(code){
+  try{
+    sessionStorage.setItem(ACCESS_KEY,'1');
+    if(code) sessionStorage.setItem(ACCESS_CODE_KEY,code);
+  }catch(e){}
+}
+function clearUnlock(){
+  try{
+    sessionStorage.removeItem(ACCESS_KEY);
+    sessionStorage.removeItem(ACCESS_CODE_KEY);
+  }catch(e){}
+}
+function sessionCode(){
+  try{return normalizeCode(sessionStorage.getItem(ACCESS_CODE_KEY)||'')}catch(e){return ''}
+}
+function normalizeCode(v){
+  return String(v||'')
+    .trim()
+    .replace(/[\uFF21-\uFF3A]/g, ch=>String.fromCharCode(ch.charCodeAt(0)-0xFF21+65))
+    .replace(/[\uFF10-\uFF19]/g, ch=>String.fromCharCode(ch.charCodeAt(0)-0xFF10+48))
+    .toUpperCase()
+    .replace(/[^A-Z0-9]/g,'');
+}
+function openCodeModal(prefill){
+  $('codeMask').classList.add('show');
+  $('codeMask').setAttribute('aria-hidden','false');
+  document.body.classList.add('lock');
+  const inp=$('codeInput');
+  if(prefill!=null) inp.value=prefill;
+  setTimeout(()=>inp.focus(),40);
+}
+function closeCodeModal(){
+  $('codeMask').classList.remove('show');
+  $('codeMask').setAttribute('aria-hidden','true');
+  document.body.classList.remove('lock');
+}
+function startQuiz(){
+  ans=[];qi=0;picking=false;
+  order=shuffle(QS.map((_,i)=>i));
+  closeCodeModal();
+  show('quiz');
+  renderQ();
+}
+function setCodeBusy(busy){
+  const btn=$('btnCodeOk');
+  btn.disabled=!!busy;
+  btn.textContent=busy?'验证中…':'开始答题';
+}
+function refreshLastBtn(){
+  let has=false;
+  try{has=!!localStorage.getItem(LAST_KEY)}catch(e){}
+  $('btnLast').hidden=!has;
+}
+function clampScore(n){
+  n=Number(n);
+  if(!Number.isFinite(n)) return null;
+  return Math.max(0, Math.min(100, Math.round(n)));
+}
+function showLast(){
+  let data=null;
+  try{data=JSON.parse(localStorage.getItem(LAST_KEY)||'null')}catch(e){data=null}
+  if(!data){toast('还没有上次结果');refreshLastBtn();return}
+  const scores={};
+  for(const id of DIM_IDS){
+    const v=clampScore(data[id]);
+    if(v==null){toast('还没有上次结果');refreshLastBtn();return}
+    scores[id]=v;
+  }
+  renderResult(analyze(scores));
+  show('result');
+  toast('已打开上次结果，本次不扣次');
+}
+async function apiFetch(url, opts){
+  const ctl=new AbortController();
+  const timer=setTimeout(()=>ctl.abort(),12000);
+  try{return await fetch(url, Object.assign({}, opts, {signal:ctl.signal}))}
+  finally{clearTimeout(timer)}
+}
+async function peekVault(code){
+  const r=await apiFetch(API_BASE+'/get?quiz='+encodeURIComponent(QUIZ_KEY)+'&code='+encodeURIComponent(code));
+  if(r.status===404) return null;
+  if(!r.ok) throw new Error('net '+r.status);
+  const data=await r.json();
+  if(!data||data.ok===false){
+    if(data&&(data.error==='not_found'||data.error==='invalid')) return null;
+    throw new Error((data&&data.error)||('net '+r.status));
+  }
+  return data;
+}
+async function redeemVault(code){
+  const r=await apiFetch(API_BASE+'/redeem',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({quiz:QUIZ_KEY,code})
+  });
+  let data=null;
+  try{data=await r.json()}catch(e){
+    if(r.status===404) return {ok:false,reason:'invalid'};
+    throw new Error('net '+r.status);
+  }
+  if(!data||!data.ok){
+    if(data&&data.error==='exhausted') return {ok:false,reason:'exhausted'};
+    if(r.status===404||(data&&(data.error==='not_found'||data.error==='invalid'))) return {ok:false,reason:'invalid'};
+    return {ok:false,reason:(data&&data.error)||('net '+r.status)};
+  }
+  return {ok:true,remaining:data.remaining,max:data.max||3};
+}
+async function tryUnlock(fromUrl){
+  if(codeBusy) return false;
+  const code=normalizeCode($('codeInput').value);
+  $('codeInput').value=code;
+  if(!code){if(!fromUrl) toast('请输入验证码');return false}
+  if(!CODE_RE.test(code)){if(!fromUrl) toast('验证码不正确');return false}
+  codeBusy=true;
+  setCodeBusy(true);
+  try{
+    const out=await redeemVault(code);
+    if(out.ok){
+      setUnlocked(code);
+      const left=out.remaining;
+      toast(left>0?('验证成功，还可以测 '+left+' 次'):'验证成功，这是本码最后一次');
+      startQuiz();
+      return true;
+    }
+    if(!fromUrl) toast(out.reason==='exhausted'?'此验证码已用完（每个码限 3 次）':'验证码不正确');
+    return false;
+  }catch(e){
+    console.error(e);
+    if(!fromUrl) toast('网络异常，请稍后重试');
+    return false;
+  }finally{
+    codeBusy=false;
+    setCodeBusy(false);
+  }
+}
+
+$('btnStart').onclick=()=>{if(isUnlocked()){startQuiz();return} openCodeModal(null)};
+$('btnLast').onclick=()=>showLast();
+$('btnViewLast').onclick=()=>showLast();
+$('btnCodeOk').onclick=()=>tryUnlock(false);
+$('codeInput').addEventListener('keydown',e=>{if(e.key==='Enter') tryUnlock(false)});
+$('codeInput').addEventListener('input',()=>{
+  const input=$('codeInput');
+  const v=input.value.toUpperCase();
+  if(v!==input.value){const p=input.selectionStart;input.value=v;try{input.setSelectionRange(p,p)}catch(e){}}
+});
+$('codeClose').onclick=closeCodeModal;
+$('codeMask').addEventListener('click',e=>{if(e.target===$('codeMask')) closeCodeModal()});
+$('qback').onclick=()=>{
+  if(picking) return;
+  if(qi>0){qi--;renderQ()}
+  else show('start');
+};
+$('btnRetry').onclick=()=>{
+  let pre='';
+  try{pre=sessionStorage.getItem(ACCESS_CODE_KEY)||''}catch(e){}
+  clearUnlock();
+  openCodeModal(pre);
+};
+$('btnCopy').onclick=copyText;
+$('btnImg').onclick=showShare;
+$('btnClose').onclick=()=>{$('ov').classList.remove('show');$('ov').setAttribute('aria-hidden','true')};
+$('btnDl').onclick=()=>{
+  if(!window.__shareUrl) return;
+  const a=document.createElement('a');
+  a.href=window.__shareUrl;a.download='love-values.png';
+  document.body.appendChild(a);a.click();a.remove();
+};
+
+fillDisclaimer($('startDisclaimer'));
+refreshLastBtn();
+(function bootFromUrl(){
+  try{
+    const u=new URL(location.href);
+    const c=normalizeCode(u.searchParams.get('code')||'');
+    if(c&&CODE_RE.test(c)){
+      $('codeInput').value=c;
+      if(!isUnlocked()) openCodeModal(c);
+    }
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
